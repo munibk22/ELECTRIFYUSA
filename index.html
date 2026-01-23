@@ -48,8 +48,10 @@
       "priceRange": "$$"
     }
     </script>
+
     <link rel="stylesheet" href="styles.css">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Calendly widget styles -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -66,7 +68,7 @@
         <!-- Image Carousel Section -->
     <section class="carousel-section">
         <div class="container">
-            <h2 class="section-title">Our <span class="title-accent">Portfolio</span></h2>
+            <h2 class="section-title" data-aos="fade-down">Our <span class="title-accent">Portfolio</span></h2>
             <div class="carousel-container">
                 <div class="carousel-slides">
                     <div class="carousel-slide">
@@ -114,43 +116,43 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Our <span class="title-accent">Services</span></h2>
+            <h2 class="section-title" data-aos="fade-down">Our <span class="title-accent">Services</span></h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-down-right">
                     <div class="service-icon">💰</div>
                     <h3 class="service-title">Business Funding</h3>
                     <p class="service-description">Access the capital you need to grow your business with our comprehensive funding solutions.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-down-right">
                     <div class="service-icon">📊</div>
                     <h3 class="service-title">Credit Repair</h3>
                     <p class="service-description">Rebuild and strengthen your credit profile for better financial opportunities.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-down-right">
                     <div class="service-icon">🏢</div>
                     <h3 class="service-title">Business Formation</h3>
                     <p class="service-description">Expert guidance through the process of establishing your business entity.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-right">
                     <div class="service-icon">🚀</div>
                     <h3 class="service-title">SEO Optimization</h3>
                     <p class="service-description">Boost your online visibility and attract more customers through strategic SEO.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-right">
                     <div class="service-icon">💻</div>
                     <h3 class="service-title">Website Creation</h3>
                     <p class="service-description">Professional, modern websites designed to convert visitors into customers.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-right">
                     <div class="service-icon">📈</div>
                     <h3 class="service-title">Business Consulting</h3>
                     <p class="service-description">Strategic guidance to help your business scale and achieve sustainable growth.</p>
@@ -162,9 +164,9 @@
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
-            <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+            <h2 class="section-title" data-aos="fade-down">Get In <span class="title-accent">Touch</span></h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="flip-left">
                     <div class="contact-item">
                         <div class="contact-label">Company Name</div>
                         <div class="contact-value">Electrify USA, Inc.</div>
@@ -185,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form-container">
+                <div class="contact-form-container" data-aos="flip-right">
                     <form class="contact-form" action="https://formspree.io/f/mpqqornn" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
@@ -228,7 +230,7 @@
 
             <!-- Scheduling Section -->
             <div class="scheduling-section">
-                <h3 class="scheduling-title">Or Schedule a <span class="title-accent">Consultation</span></h3>
+                <h3 class="scheduling-title"  data-aos="fade-down">Or Schedule a <span class="title-accent">Consultation</span></h3>
                 <p class="scheduling-description">Book a free 30-minute consultation to discuss your business needs.</p>
                 
                 <!-- Calendly inline widget begin -->
@@ -289,6 +291,10 @@
         setInterval(() => {
             moveSlide(1);
         }, 5000);
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
