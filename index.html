@@ -3,7 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrify USA, Inc. - Business Growth Solutions</title>
+    <title>Electrify USA, Inc. - Business Growth Solutions | Funding, Credit Repair & More</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Electrify USA provides business funding, credit repair, business formation, SEO optimization, and website creation services in Sylvania, Ohio. Powering your business growth.">
+    <meta name="keywords" content="business funding, credit repair, business formation, SEO optimization, website creation, business consulting, Sylvania Ohio, Toledo Ohio">
+    <meta name="author" content="Electrify USA, Inc.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Electrify USA, Inc. - Business Growth Solutions">
+    <meta property="og:description" content="Access business funding, credit repair, and comprehensive business services. Powering your business growth in Ohio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://electrifyinc.com">
+    <meta property="og:image" content="https://electrifyinc.com/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electrify USA, Inc. - Business Growth Solutions">
+    <meta name="twitter:description" content="Access business funding, credit repair, and comprehensive business services in Ohio.">
+    <meta name="twitter:image" content="https://electrifyinc.com/images/twitter-image.jpg">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Electrify USA, Inc.",
+      "description": "Business funding, credit repair, business formation, SEO optimization, and website creation services",
+      "url": "https://electrifyinc.com",
+      "telephone": "+14193188250",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5834 Monroe St, Ste A-1068",
+        "addressLocality": "Sylvania",
+        "addressRegion": "OH",
+        "postalCode": "43560",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ohio"
+      },
+      "priceRange": "$$"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -234,6 +278,108 @@
             transform: translateY(0);
         }
 
+        /* Image Carousel */
+        .carousel-section {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .carousel-slide:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .carousel-slide:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .carousel-slide:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .carousel-slide:nth-child(5) {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            border: none;
+            padding: 16px 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(220, 38, 38, 0.8);
+        }
+
+        .carousel-btn.prev {
+            left: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .carousel-btn.next {
+            right: 20px;
+            border-radius: 8px 0 0 8px;
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #dc2626;
+            transform: scale(1.2);
+        }
+
         /* CTA Section */
         .cta {
             background: #000000;
@@ -351,6 +497,58 @@
         </div>
     </section>
 
+    <!-- Image Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Our <span class="title-accent">Portfolio</span></h2>
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <div style="text-align: center; padding: 40px;">
+                            <h3>Business Funding Success</h3>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">Helping businesses secure capital</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div style="text-align: center; padding: 40px;">
+                            <h3>Credit Transformation</h3>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">Rebuilding credit profiles</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div style="text-align: center; padding: 40px;">
+                            <h3>Business Formation</h3>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">Launching successful ventures</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div style="text-align: center; padding: 40px;">
+                            <h3>SEO Excellence</h3>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">Driving online visibility</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div style="text-align: center; padding: 40px;">
+                            <h3>Website Development</h3>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">Creating digital experiences</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(0)"></span>
+                    <span class="indicator" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
@@ -434,5 +632,43 @@
             <p>&copy; 2026 Electrify USA, Inc. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelector('.carousel-slides');
+        const totalSlides = document.querySelectorAll('.carousel-slide').length;
+        const indicators = document.querySelectorAll('.indicator');
+
+        function moveSlide(direction) {
+            currentSlideIndex += direction;
+
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            } else if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -currentSlideIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        // Auto-play carousel every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
 </body>
 </html>
