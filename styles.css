@@ -235,7 +235,8 @@ header {
 
 .carousel-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 1500px;
+    max-height: 25rem;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
