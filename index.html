@@ -48,401 +48,11 @@
       "priceRange": "$$"
     }
     </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: #000000;
-            color: #ffffff;
-            padding: 80px 0 60px;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        .logo-accent {
-            color: #dc2626;
-        }
-
-        .tagline {
-            font-size: 1.25rem;
-            color: #e5e5e5;
-            font-weight: 300;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: #000000;
-        }
-
-        .title-accent {
-            color: #dc2626;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border: 2px solid #e5e5e5;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: #dc2626;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.1);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #dc2626;
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #000000;
-            font-weight: 600;
-        }
-
-        .service-description {
-            color: #525252;
-            line-height: 1.7;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #f5f5f5;
-            padding: 80px 0;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid #dc2626;
-        }
-
-        .contact-item {
-            margin-bottom: 30px;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #737373;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .contact-value {
-            font-size: 1.125rem;
-            color: #000000;
-        }
-
-        .contact-value a {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-value a:hover {
-            color: #dc2626;
-        }
-
-        /* Contact Form */
-        .contact-form-container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid #dc2626;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #737373;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 12px 16px;
-            border: 2px solid #e5e5e5;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-            background: #ffffff;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #dc2626;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-button {
-            background: #dc2626;
-            color: #ffffff;
-            padding: 16px 40px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .submit-button:hover {
-            background: #b91c1c;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
-        }
-
-        .submit-button:active {
-            transform: translateY(0);
-        }
-
-        /* Image Carousel */
-        .carousel-section {
-            background: #ffffff;
-            padding: 80px 0;
-        }
-
-        .carousel-container {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-
-        .carousel-slide:nth-child(2) {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .carousel-slide:nth-child(3) {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .carousel-slide:nth-child(4) {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-
-        .carousel-slide:nth-child(5) {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        }
-
-        /* Carousel Navigation Buttons */
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: #ffffff;
-            border: none;
-            padding: 16px 20px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            transition: background 0.3s ease;
-            z-index: 10;
-        }
-
-        .carousel-btn:hover {
-            background: rgba(220, 38, 38, 0.8);
-        }
-
-        .carousel-btn.prev {
-            left: 20px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .carousel-btn.next {
-            right: 20px;
-            border-radius: 8px 0 0 8px;
-        }
-
-        /* Carousel Indicators */
-        .carousel-indicators {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .indicator.active {
-            background: #dc2626;
-            transform: scale(1.2);
-        }
-
-        /* CTA Section */
-        .cta {
-            background: #000000;
-            color: #ffffff;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #dc2626;
-            color: #ffffff;
-            padding: 16px 40px;
-            font-size: 1.125rem;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .cta-button:hover {
-            background: #b91c1c;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #a3a3a3;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                padding: 60px 0 40px;
-            }
-
-            .services, .contact {
-                padding: 60px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Calendly widget styles -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
     <!-- Header -->
@@ -453,51 +63,7 @@
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our <span class="title-accent">Services</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💰</div>
-                    <h3 class="service-title">Business Funding</h3>
-                    <p class="service-description">Access the capital you need to grow your business with our comprehensive funding solutions.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3 class="service-title">Credit Repair</h3>
-                    <p class="service-description">Rebuild and strengthen your credit profile for better financial opportunities.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3 class="service-title">Business Formation</h3>
-                    <p class="service-description">Expert guidance through the process of establishing your business entity.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3 class="service-title">SEO Optimization</h3>
-                    <p class="service-description">Boost your online visibility and attract more customers through strategic SEO.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3 class="service-title">Website Creation</h3>
-                    <p class="service-description">Professional, modern websites designed to convert visitors into customers.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3 class="service-title">Business Consulting</h3>
-                    <p class="service-description">Strategic guidance to help your business scale and achieve sustainable growth.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Carousel Section -->
+        <!-- Image Carousel Section -->
     <section class="carousel-section">
         <div class="container">
             <h2 class="section-title">Our <span class="title-accent">Portfolio</span></h2>
@@ -544,6 +110,50 @@
                     <span class="indicator" onclick="currentSlide(2)"></span>
                     <span class="indicator" onclick="currentSlide(3)"></span>
                     <span class="indicator" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our <span class="title-accent">Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3 class="service-title">Business Funding</h3>
+                    <p class="service-description">Access the capital you need to grow your business with our comprehensive funding solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Credit Repair</h3>
+                    <p class="service-description">Rebuild and strengthen your credit profile for better financial opportunities.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Business Formation</h3>
+                    <p class="service-description">Expert guidance through the process of establishing your business entity.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 class="service-title">SEO Optimization</h3>
+                    <p class="service-description">Boost your online visibility and attract more customers through strategic SEO.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3 class="service-title">Website Creation</h3>
+                    <p class="service-description">Professional, modern websites designed to convert visitors into customers.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3 class="service-title">Business Consulting</h3>
+                    <p class="service-description">Strategic guidance to help your business scale and achieve sustainable growth.</p>
                 </div>
             </div>
         </div>
@@ -614,6 +224,16 @@
                         <button type="submit" class="submit-button">Send Message</button>
                     </form>
                 </div>
+            </div>
+
+            <!-- Scheduling Section -->
+            <div class="scheduling-section">
+                <h3 class="scheduling-title">Or Schedule a <span class="title-accent">Consultation</span></h3>
+                <p class="scheduling-description">Book a free 30-minute consultation to discuss your business needs.</p>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/munib-electrifyinc/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <!-- Calendly inline widget end -->
             </div>
         </div>
     </section>
