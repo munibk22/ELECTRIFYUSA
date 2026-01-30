@@ -73,7 +73,7 @@
         </div>
     </header>
 
-        <!-- Image Carousel Section -->
+    <!-- Image Carousel Section -->
     <section class="carousel-section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-down">Our <span class="title-accent">Portfolio</span></h2>
@@ -129,41 +129,48 @@
     <section class="services">
         <div class="container">
             <h2 class="section-title" data-aos="fade-down">Our <span class="title-accent">Services</span></h2>
+            <div class="section-title" data-aos="fade-down">Click To <span class="title-accent">Learn More</span></div>
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-down-right">
+                <div class="service-card" data-aos="fade-down-right" onclick="openServicePopup('business-funding')">
                     <div class="service-icon">💰</div>
                     <h3 class="service-title">Business Funding</h3>
                     <p class="service-description">Access the capital you need to grow your business with our comprehensive funding solutions.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
 
-                <div class="service-card" data-aos="fade-down-right">
+                <div class="service-card" data-aos="fade-down-right" onclick="openServicePopup('credit-repair')">
                     <div class="service-icon">📊</div>
                     <h3 class="service-title">Credit Repair</h3>
                     <p class="service-description">Rebuild and strengthen your credit profile for better financial opportunities.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
 
-                <div class="service-card" data-aos="fade-down-right">
+                <div class="service-card" data-aos="fade-down-right" onclick="openServicePopup('business-formation')">
                     <div class="service-icon">🏢</div>
                     <h3 class="service-title">Business Formation</h3>
                     <p class="service-description">Expert guidance through the process of establishing your business entity.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
 
-                <div class="service-card" data-aos="fade-right">
+                <div class="service-card" data-aos="fade-right" onclick="openServicePopup('seo-optimization')">
                     <div class="service-icon">🚀</div>
                     <h3 class="service-title">SEO Optimization</h3>
                     <p class="service-description">Boost your online visibility and attract more customers through strategic SEO.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
 
-                <div class="service-card" data-aos="fade-right">
+                <div class="service-card" data-aos="fade-right" onclick="openServicePopup('website-creation')">
                     <div class="service-icon">💻</div>
                     <h3 class="service-title">Website Creation</h3>
                     <p class="service-description">Professional, modern websites designed to convert visitors into customers.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
 
-                <div class="service-card" data-aos="fade-right">
+                <div class="service-card" data-aos="fade-right" onclick="openServicePopup('business-consulting')">
                     <div class="service-icon">📈</div>
                     <h3 class="service-title">Business Consulting</h3>
                     <p class="service-description">Strategic guidance to help your business scale and achieve sustainable growth.</p>
+                    <button class="learn-more-btn">Learn More →</button>
                 </div>
             </div>
         </div>
@@ -254,7 +261,8 @@
             <h2 class="cta-title">Ready to Electrify Your Business?</h2>
             <a href="tel:+14193188250" class="cta-button">Call Us Today</a>
             <br />
-            <a href="mailto:contact@electrifyinc.com?subject=Business Inquiry&body=Hello,">📧Email Us</a>
+            <a href="mailto:contact@electrifyinc.com?subject=Business Inquiry&body=Hello," 
+            style="color: #ffffff; text-decoration: none; margin-top: 10px; display: inline-block;">📧Email Us</a>
         </div>
     </section>
 
@@ -265,46 +273,20 @@
         </div>
     </footer>
 
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelector('.carousel-slides');
-        const totalSlides = document.querySelectorAll('.carousel-slide').length;
-        const indicators = document.querySelectorAll('.indicator');
+    <!-- Service Popup Modal -->
+    <div id="servicePopup" class="popup-overlay">
+        <div class="popup-container">
+            <button class="popup-close" onclick="closeServicePopup()">&times;</button>
+            <div id="popupContent" class="popup-content">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
 
-        function moveSlide(direction) {
-            currentSlideIndex += direction;
-
-            if (currentSlideIndex < 0) {
-                currentSlideIndex = totalSlides - 1;
-            } else if (currentSlideIndex >= totalSlides) {
-                currentSlideIndex = 0;
-            }
-
-            updateCarousel();
-        }
-
-        function currentSlide(index) {
-            currentSlideIndex = index;
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const offset = -currentSlideIndex * 100;
-            slides.style.transform = `translateX(${offset}%)`;
-
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlideIndex);
-            });
-        }
-
-        // Auto-play carousel every 5 seconds
-        setInterval(() => {
-            moveSlide(1);
-        }, 8000);
-    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="services.js"></script>
 </body>
 </html>
